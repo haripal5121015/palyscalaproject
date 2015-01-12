@@ -1,0 +1,27 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
+      
+
+    </head>
+    <body>
+        @content
+       <div class="maindiv">
+       <form action="/create" method="post">
+  	    <label>Enter Your Name    </label>
+        <input type="text" name="name"><br/>
+        <label>Enter Your Address</label>
+        <input type="text" name="address"><br/>
+       	<button type="submit"> add person</button>
+
+  </form>
+  </div>
+    </body>
+</html>
